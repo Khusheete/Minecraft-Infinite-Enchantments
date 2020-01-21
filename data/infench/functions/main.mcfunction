@@ -5,6 +5,6 @@ execute as @e[type=item,tag=!infench.enchanted,tag=!infench.not_enchanted] if da
 tag @e[type=item,tag=!infench.enchanted] add infench.not_enchanted
 
 #combine the enchants
-execute as @e[type=item,nbt={OnGround:1b},tag=infench.enchanted] at @s run function infench:tests/multiple_items
+execute as @e[type=item,nbt={OnGround:1b},tag=infench.enchanted] at @s if block ~ ~-1 ~ #minecraft:anvil run function infench:tests/multiple_items
 tag @e[type=item,nbt={OnGround:1b}] remove infench.checked
 
