@@ -1,0 +1,20 @@
+{
+    "criteria": {
+        "hit_target": {
+            "trigger": "player_hurt_entity",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "direct_entity": {
+                            "type": "minecraft:trident",
+                            "nbt": "{Tags:[\"channeling.trident\"]}"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "channeling:summon_lightning"
+    }
+}
