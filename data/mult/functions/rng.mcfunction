@@ -1,4 +1,5 @@
-#define tag mult.temp
+#define objective mult.temp
+#define tag rngcloud
 scoreboard objectives add mult.temp dummy
 
 # Summon new rng source
@@ -6,7 +7,7 @@ summon area_effect_cloud ~ ~ ~ {Tags:["rngcloud"]}
 #define tag rngcloud
 
 # Gets and stores UUIDMost from the effect cloud with a dampener (the 0.00... at the end)
-execute store result score $rng mult.temp run data get entity @e[type=area_effect_cloud,tag=rngcloud,limit=1] UUIDMost 0.0000000002328306436538696289
+execute store result score $rng mult.temp run data get entity @e[type=area_effect_cloud,tag=rngcloud,limit=1] UUID[0]
 # $rng = score | mult.temp = objective
 
 # Removes used rng source
